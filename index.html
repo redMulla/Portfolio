@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./images/My portfolio.png" alt="portfolio logo" >
+            <ul>
+                <li><a href="#about-me" class="nav_link">About me</a></li>
+                <li><a href="#skills" class="nav_link">Skills</a></li>
+                <li><a href="https://github.com/redMulla?tab=repositories" target="_blank" class="nav_link">Projects</a></li>
+                <li><a href="./page/contact.html" class="nav_link">Contact</a></li>
+            </ul>
+            <div class="a-bars">
+                <div class="bars"></div>
+                <div class="bars"></div>
+                <div class="bars"></div>
+            </div>
+        </nav>
+        <section class="banner">
+            <div class="blur">
+                <h1>Hi, <br> I am Vassilly Ibinkwiye, <br> Web Developer.</h1>
+                <p>Frontend and Backend developer from Bujumbura, Burundi. I create custom websites to help businesses do better online.</p>
+                <button><a href="https://github.com/redMulla?tab=repositories" target="_blank">My Projects</a></button>
+            </div>
+            <div class="my-picture">
+                <img src="./images/mega.png" alt="me">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="me-again">
+            <img src="./images/meee.jpg" alt="me again">
+        </div>
+        <div class="about-me" id="about-me">
+            <h2>About Me</h2>
+            <p>I'm Vassilly, a Full-Stack Web Developer from East Africa exactly in Burundi. I've worked remotely for some exciting startups and estaplished companies.
+                These have been located all over Africa, from Burundi and Rwanda, to Kenya and Uganda. <br>
+                In my free time I like to read books, code and listen to some rap songs. <br>
+                My websites are:
+            </p>
+            <h3>Fast</h3>
+            <p>Fast load times and lag free interaction, my highest priority.</p>
+            <h3>Responsive</h3>
+            <p>My layouts will work on any device, big or small.</p>
+            <h3>Intuitive</h3>
+            <p>Strong preference for easy to use, intuitive UX/UI.</p>
+        </div>
+        <div class="skills" id="skills">
+            <h2>Skills</h2>
+            <div class="icons">
+                <div>
+                    <img src="./images/htmlone.png" alt="html">
+                </div>
+                <div>
+                    <img src="./images/cssone.png" alt="css">
+                </div>
+                <div>
+                    <img src="./images/javascript1.png" alt="javascript">
+                </div>
+                <div>
+                    <img src="./images/gitone.jpg" alt="git">
+                </div>
+                <div>
+                    <img src="./images/GitHub-logo.png" alt="github">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>©Vassilly Ibinkwiye</p>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $('.a-bars').click(function(){
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+</html>
