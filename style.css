@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    }
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-color: rgb(247, 247, 247);
+    overflow: hidden;
+    padding-right: 1.25rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+nav img {
+    width: 172px;
+    height: 68px;
+}
+
+div.a-bars {
+    float: right;
+    margin-top: 1.2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+div.bars {
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.nav_link {
+    margin-left: 0.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    position: relative;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    padding: 0.25rem 0.5rem;
+}
+
+.nav_link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    left: 0.75rem;
+    right: 0.75rem;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.nav_link:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+
+.banner {
+    background-image: url('./images/wallpaper\ 1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35rem;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner button{
+    border: 1px solid currentColor;
+    border-radius: 2em;
+    transition: background 250ms ease-in-out;
+    letter-spacing: 1px;
+    padding: 0.75em 1.5em;
+    background-color: transparent;
+    margin: 2em 25%;
+    
+}
+.banner button a {
+    text-decoration: none;
+    color: currentColor;
+    font-size: 1.5em;
+}
+.banner button:hover {
+    background: black;
+    color: white;
+    border-color: rgb(0, 0, 0);
+}
+
+.blur {
+    width: 30em;
+}
+
+.blur h1 {
+    font-size: 3em;
+}
+
+.blur p {
+    font-size: 1.5em;
+}
+
+.my-picture {
+    height: 100%;
+    width: auto;
+}
+
+main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 3em;
+    flex-wrap: wrap;
+}
+
+.me-again {
+    display: none;
+}
+
+.me-again img {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.about-me {
+    width: 20%;
+    min-width: 200px;
+    overflow: hidden;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.about-me p {
+    margin-top: 0.5em;
+}
+
+.about-me h3 {
+    margin-top: 0.8em;
+}
+
+.skills {
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    letter-spacing: 1px;
+    min-width: 200px;
+    margin-top: 2em;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.icons img {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.4em;
+}
+
+.icon-contact {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icon-contact img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5em;
+}
+
+footer {
+    width: 100%;
+    background-image: url('./images/grey\ bckgd.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 4rem;
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    letter-spacing: 1px;
+}
+
+.contact h2 {
+    margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 930px) {
+    .my-picture {
+        display: none;
+    }
+
+    .me-again {
+        margin-right: 30px;
+    }
+
+    .me-again {
+        display: block;
+    }
+    
+}
+
+@media only screen and (max-width: 649px) {
+    nav {
+        position: fixed;
+        width: 100%;
+    }
+
+    .banner {
+        margin-top: 5rem;
+    }
+
+    nav .a-bars {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 70%;
+        height: 80%;
+        background: rgba(0, 0, 0, 0.75);
+        top: 5rem;
+        left: -150%;
+        text-align: center;
+        transition: all .6s;
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 20px;
+        color: white;
+        width: 100%;
+    }
+
+    nav a:hover {
+        border: none;
+        color: rgb(0, 0, 0);
+    }
+    nav ul.show {
+        left: 0;
+    }
+    
+    .contact-body nav {
+        position: inherit;
+    }
+}
+
+main.contact {
+    display: block;
+    text-align: center;
+}
